@@ -1,0 +1,18 @@
+from selenium.webdriver import Edge
+PATH='C:/WebDriver/bin/msedgedriver.exe'  
+driver = Edge(executable_path=PATH)
+
+"""We are importing selenium modules functions for Edge .You can use your preferred browser ,just read the configuration file for detailed instructions"""
+
+##Edge(executable_path=PATH) make sure you give PATH as an argument!
+url="https://www.cse.iitd.ac.in/~aseth/col100-2021/col100.html"
+driver.get(url)
+links_list=driver.find_elements_by_tag_name("a")
+l=[i.text for i in links_list]
+import pickle
+import os.path
+from os import path
+fileloc="C:/Users/91901/AppData/Local/Programs/Python/Python39/campushack/linkdict.txt"
+if not(path.exists(fileloc)):
+    Course_links_Dict={url:l}
+    pickle.dump( Course_links_Dict, open( "C:/Users/91901/AppData/Local/Programs/Python/Python39/campushack/linkdict.txt", "wb" ) )
