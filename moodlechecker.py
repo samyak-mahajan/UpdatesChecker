@@ -21,7 +21,7 @@ def moodle_login():
     Please subtract 56 - 84 =
     Forgotten your username or password?
     """
-    lines=formtext.text.split("\n")
+    lines=formtext.teAfxt.split("\n")
     """print(lines) gives output
     ['Username / email', 'Password', 'Remember username', 'Please enter first value 85 , 92 =', 'Forgotten your username or password?']
     so we need to check for the element at index 3"""
@@ -46,8 +46,12 @@ def moodle_login():
     loginbutton=driver.find_element_by_id("loginbtn")
     loginbutton.click()
     """YAAYYYYY!!!!! """
-
-
+"""Add the moodle course links and other forum links in this dictionary by logging into moodle,opening the course page and copying the url in this dictioonary.
+For detailed instructions see the configurations file(Though I doubt I could tell you more than this ;).
+I am from batch B so I am putting links for Batch B"""
+#right now I am just creating the logic so I am using only one link. rest others can be similarly done easily once I create the full logic
+Courses_website_dict={"2002-ELL101":"https://moodle.iitd.ac.in/course/view.php?id=11053"}
+import pickle
 
 
 
