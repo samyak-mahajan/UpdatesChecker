@@ -1,14 +1,8 @@
-from selenium.webdriver import Edge
 
-"""We are importing selenium modules functions for Edge"""
-
-ID="ID"#put your moodle id here for example ph1200xx
-PWD="password"#put your password here 
-PATH='C:/WebDriver/bin/msedgedriver.exe'
-##Edge(executable_path=PATH) make sure you give PATH as an argument!
-driver=Edge(PATH)
 """DEVNOTES::::PUT ALL THE LOGIN PORTION IN A FUNCTION CALLED MOODLE LOGIN AND ALL THE PART OF CHECKING UPDATES IN A FUNCTION CALLED MOODLE_CHECK(IT CAN BE IN LOWERCASE!!!)"""
 def moodle_login():
+    ID="ID"#put your moodle id here for example ph1200xx
+    PWD="password"#put your password here 
     driver.get("https://moodle.iitd.ac.in/login/index.php")  
     """finding username tbox,clicking on it,typing id,same with pwd"""
     username_textbox = driver.find_element_by_id("username")
@@ -54,7 +48,7 @@ def moodle_login():
     """YAAYYYYY!!!!! """
 
 
-moodle_login()
+
 
 
 ##driver.close()
